@@ -72,7 +72,10 @@ class PerfTimings(object):
 
     def print_output(self):
         """Print performance timers for each URL to stdout."""
-        print "| {url:30.25} | {DNS Resolution:9d} ms | {TCP Connection:9d} ms | {SSL Handshake:9d} ms  | {Backend Time:9d} ms | {Frontend Time:10d} ms | {Page Load:6d} ms |".format(**self.calc_timings)
+        print ("| {url:30.25} | {DNS Resolution:9d} ms | "
+               "{TCP Connection:9d} ms | {SSL Handshake:9d} ms  |"
+               " {Backend Time:9d} ms | {Frontend Time:10d} ms |"
+               " {Page Load:6d} ms |").format(**self.calc_timings)
 
         print "=" * 123
 
